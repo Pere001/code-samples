@@ -1,6 +1,8 @@
 // 
 // A function that checks a collision between a circle and a triangular wall. Coordinate values are integers.
 //
+// Has a little bit of unincluded context.
+//
 
 
 b32 CircleWallCollision(wall *w, v2s center, s32 radius){
