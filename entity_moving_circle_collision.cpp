@@ -19,8 +19,8 @@ entity *EntityMovingCircleCollision(world *w, entity_type entityType, s32 r, v2s
 	v2s chunkPosMax = WorldPosToChunk(w, ClampWorldPos(w, bboxMax));
 
 	// Computing the intersection between a circle and a point is faster than between a circle
-    // and line. So, we make a big circle that contains the "pill shape". If an entity collides
-    // with this, then we'll check the more expensive line/circle collision.
+        // and line. So, we make a big circle that contains the "pill shape". If an entity collides
+        // with this, then we'll check the more expensive line/circle collision.
 	s64 earlyOutCircleRSqr = SquareS64((s64)r + (s64)Length(V2(p1 - p0))/2);
 	s64 rSqr = SQUARE((s64)r);
 
