@@ -48,7 +48,7 @@ f32 FlipAngleX(f32 angle){
 	return result;
 }
 
-// - Limits 'a' to range 'limit0' to 'limit1' in CW direction.
+// - Limits 'a' to range 'limit0' to 'limit1' in ascending direction.
 // - If 'limit0' == 'limit1' the only result will be that limit.
 // - If 'limit0' == 0 && 'limit1' == 2*PI the result can be any angle.
 f32 ClampAngle(f32 a, f32 limit0, f32 limit1){
