@@ -1,5 +1,7 @@
 //
-// A collision function from my game. I haven't included any dependencies of this function, but it's a good example of the kind of code in my game.
+// A collision function from my game.
+// 
+// Has a lot of unincluded context.
 //
 
 
