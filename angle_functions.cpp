@@ -1,6 +1,8 @@
 //
 // Small angle functions that I grabbed from my game.
 //
+
+
 typedef float f32;
 #define PI 3.141592653589793238462f
 #include <math.h>
