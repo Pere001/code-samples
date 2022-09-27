@@ -1,6 +1,6 @@
 //
 // Audio mixer function from my game. Called every frame to write and advance the currently playing sounds.
-// The sound output has 2 channels (left and right). Supports linearly changing the pitch and volume of individual sounds. 
+// The sound output has 2 channels (left and right). Supports linearly changing the pitch, panning and volume of individual sounds. 
 //
 // Has a bit of unincluded context.
 //
