@@ -5,14 +5,9 @@
 //
 
 
-// - true if order is ABC/CAB/BCA, and false if order is CBA/ACB/BAC.
-// - If any of A,B,C are the same, the result is false.
-#define ThreeCircularIndicesAreAscending(a, b, c) (	\
-    (((a)<(b)) + ((b)<(c)) + ((c)<(a))) & 0x2)
-
 // - If C is equal to A or B, this results in false.
 // - Otherwise, if A==B this results in true.
-// - Otherwise it's the same as above.
+// - Otherwise, true if order is ABC/CAB/BCA, and false if order is CBA/ACB/BAC.
 #define ThreeCircularIndicesAreAscendingAndFirstTwoCanBeEqual(a, b, c) ( \
     (((a)<=(b)) + ((b)<(c)) + ((c)<(a))) & 0x2)
 
