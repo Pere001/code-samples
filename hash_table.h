@@ -13,7 +13,7 @@
 // - If C is equal to A or B, this results in false.
 // - Otherwise, if A==B this results in true.
 // - Otherwise it's the same as above.
-#define ThreeCircularIndicesAreAscendingAndFirstTwoCanBeEqual(a, b, c) (	\
+#define ThreeCircularIndicesAreAscendingAndFirstTwoCanBeEqual(a, b, c) ( \
 	(((a)<=(b)) + ((b)<(c)) + ((c)<(a))) & 0x2)
 
 
