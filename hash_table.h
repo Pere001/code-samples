@@ -1,7 +1,7 @@
 //
 // Hash Table
 //
-// Has a bit of unincluded context.
+// Has a tiny bit of unincluded context.
 //
 
 
