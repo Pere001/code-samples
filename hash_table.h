@@ -480,4 +480,4 @@ b32 HashTable_ResizeIfNeeded(hash_table<T>){
 		HashTable_Resize(table, newTotalSlots);
 	}
 }
- 
+
