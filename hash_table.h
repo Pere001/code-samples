@@ -111,7 +111,7 @@ inline u32 HashTable_U64KeyToHashNotModulo(u64 key){
 }
 
 template<typename T, typename K>
-u32 HashTable_KeyToHash(hash_table<T> *table, K key) {	
+u32 HashTable_KeyToHash(hash_table<T> *table, K key) {  
     Assert(sizeof(((T *)0)->key) == sizeof(*(K *)0));
 
     K keyLocal = key;
@@ -121,7 +121,7 @@ u32 HashTable_KeyToHash(hash_table<T> *table, K key) {
     }else if (sizeof(key) == 2) { asU64 = (u64) *(u16 *)&keyLocal;
     }else if (sizeof(key) == 4) { asU64 = (u64) *(u32 *)&keyLocal;
     }else if (sizeof(key) == 8) { asU64 =       *(u64 *)&keyLocal;
-    }else{ 							
+    }else{                          
         asU64 = 0;
         for(u32 i = 0; i < sizeof(key) / 8; i++){
             asU64 ^= ((u64 *)&keyLocal)[i];
@@ -131,7 +131,7 @@ u32 HashTable_KeyToHash(hash_table<T> *table, K key) {
             memcpy(&remaining, (u8 *)(&keyLocal + 1) - (sizeof(key) % 8), sizeof(key) % 8);
             asU64 ^= remaining;
         }
-    }																			
+    }                                                                           
     u32 hash = HashTable_U64KeyToHashNotModulo(asU64) % table->totalSlots;
     return hash;
 }
@@ -169,7 +169,7 @@ inline void HashTable_AssertValidType(hash_table<T> *table){
 template <typename T>
 inline void HashTable_InitFromMemory(hash_table<T> *table, T *mem, s32 totalSlots){
     Assert(initialNumSlots >= 10);
-    HashTable_AssertValidType(table);														
+    HashTable_AssertValidType(table);                                                       
 
     table->totalSlots = totalSlots;
     table->occupiedSlots = 0;
@@ -178,8 +178,8 @@ inline void HashTable_InitFromMemory(hash_table<T> *table, T *mem, s32 totalSlot
 }
 template <typename T>
 inline void HashTable_Init(hash_table<T> *table, s32 initialNumSlots) {
-    umm memSize = (umm)initialNumSlots*sizeof(T);					
-    HashTable_InitFromMemory(table, (T *)malloc(memSize), initialNumSlots);	
+    umm memSize = (umm)initialNumSlots*sizeof(T);                   
+    HashTable_InitFromMemory(table, (T *)malloc(memSize), initialNumSlots); 
 }
 
 template <typename T>
